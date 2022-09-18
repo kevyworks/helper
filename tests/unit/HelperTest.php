@@ -1,15 +1,12 @@
 <?php
 
+# curl -LO https://phar.phpunit.de/phpunit-5.7.phar &&
+# mv -f phpunit-5.7.phar /usr/local/bin/phpunit &&
+# chmod +x /usr/local/bin/phpunit
+require_once __DIR__ . '/../../Helper.php';
+
 class HelperTest extends \PHPUnit\Framework\TestCase
 {
-    public function setUp()
-    {
-        # curl -LO https://phar.phpunit.de/phpunit-5.7.phar &&
-        # mv -f phpunit-5.7.phar /usr/local/bin/phpunit &&
-        # chmod +x /usr/local/bin/phpunit
-        require_once __DIR__ . '/../../Helper.php';
-    }
-
     public function test_str_tpl()
     {
         $this->assertEquals(
